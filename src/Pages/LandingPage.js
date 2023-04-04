@@ -4,14 +4,17 @@ import Integration from "./Integration/Integration";
 import Nav from "../Pages/Navbar/Nav";
 import WhyDealdone from "./WhyDealdone/WhyDealdone";
 import { Button } from "@material-tailwind/react";
+import Brands from "./Home/Brands";
 
 const LandingPage = () => {
   return (
     <>
       <Nav />
       <Home />
-      {/* <Integration />
-      <WhyDealdone /> */}
+      <Brands />
+
+      {/* <Integration /> */}
+      {/*<WhyDealdone /> */}
     </>
   );
 };
