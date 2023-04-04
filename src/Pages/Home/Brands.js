@@ -72,37 +72,35 @@ const Brands = () => {
   ];
 
   return (
-    <>
-      <div className=" bg-slate-100 flex justify-center items-center px-5">
-        <Carousel
-          breakPoints={breakPoints}
-          ref={carouselRef}
-          enableMouseSwipe={true}
-          // itemsToShow={3}
-          //   itemsToScroll={itemsToScroll}
-          // renderArrow={myArrow}
-          pagination={false}
-          // renderPagination={myPagination}
-          enableAutoPlay={true}
-          autoPlaySpeed={2500}
-          onNextEnd={({ index }) => {
-            console.log("index", index, "length", items.length);
-            if (index === 4) {
-              clearTimeout(resetTimeout);
-              resetTimeout = setTimeout(() => {
-                carouselRef?.current?.goTo(0);
-              }, 2000); // same time
-            }
-          }}
-        >
-          {items.map((item, i) => (
-            <div key={i} item={item}>
-              <img src={item.brand} alt="..." className="w-38" />
-            </div>
-          ))}
-        </Carousel>
-      </div>
-    </>
+    <div className=" bg-slate-100 flex justify-center items-center p-5">
+      <Carousel
+        breakPoints={breakPoints}
+        ref={carouselRef}
+        enableMouseSwipe={true}
+        // itemsToShow={3}
+        //   itemsToScroll={itemsToScroll}
+        // renderArrow={myArrow}
+        pagination={false}
+        // renderPagination={myPagination}
+        enableAutoPlay={true}
+        autoPlaySpeed={2500}
+        onNextEnd={({ index }) => {
+          console.log("index", index, "length", items.length);
+          if (index === 4) {
+            clearTimeout(resetTimeout);
+            resetTimeout = setTimeout(() => {
+              carouselRef?.current?.goTo(0);
+            }, 2000); // same time
+          }
+        }}
+      >
+        {items.map((item, i) => (
+          <div key={i} item={item}>
+            <img src={item.brand} alt="..." className="w-38" />
+          </div>
+        ))}
+      </Carousel>
+    </div>
   );
 };
 

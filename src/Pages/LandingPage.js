@@ -12,9 +12,9 @@ const LandingPage = () => {
       <Nav />
       <Home />
       <Brands />
+      <WhyDealdone />
 
       {/* <Integration /> */}
-      {/*<WhyDealdone /> */}
     </>
   );
 };

@@ -1,5 +1,6 @@
 import { IconButton, MobileNav, Navbar } from "@material-tailwind/react";
 import React from "react";
+import "./Nav.css";
 import { Link } from "react-scroll";
 import PrimaryButton from "../../Components/Button/PrimaryButton";
 import logo from "../../assets/logo/logo.svg";
@@ -17,13 +18,13 @@ const Nav = () => {
   const navList = (
     <ul className="mb-4 mt-4 flex flex-col gap-4  lg:mb-0 lg:mt-0 lg:flex-row items-start lg:items-center lg:gap-6">
       <Link
-        to="home"
+        to="/"
         spy={true}
         smooth={true}
         activeClass="active"
         offset={-78}
         duration={500}
-        className="text-gray-800 hover:text-blue-500 duration-500 cursor-pointer "
+        className="text-gray-800 font-bold hover:text-blue-500 duration-500 cursor-pointer "
       >
         Home
       </Link>
@@ -36,7 +37,7 @@ const Nav = () => {
           smooth={true}
           offset={-70}
           duration={500}
-          className="text-gray-800 hover:text-blue-500  duration-500"
+          className="text-gray-800 font-bold hover:text-blue-500  duration-500"
         >
           Why Dealdone
         </Link>
@@ -49,7 +50,7 @@ const Nav = () => {
           smooth={true}
           offset={-70}
           duration={500}
-          className="text-gray-800 hover:text-blue-500  duration-500"
+          className="text-gray-800 font-bold hover:text-blue-500  duration-500"
         >
           Credit Scoring
         </Link>
@@ -62,7 +63,7 @@ const Nav = () => {
           activeClass="active"
           offset={-70}
           duration={500}
-          className="text-gray-800  hover:text-blue-500  duration-500"
+          className="text-gray-800 font-bold  hover:text-blue-500  duration-500"
         >
           Pricing
         </Link>
@@ -74,7 +75,17 @@ const Nav = () => {
     <>
       <Navbar className="sticky inset-0 z-10 h-max max-w-full rounded-none shadow-none bg-transparent border-none py-2 px-4 lg:px-8 lg:py-3">
         <div className="flex items-center justify-between text-blue-gray-900">
-          <img className="w-32" src={logo} alt="..." />
+          <Link
+            to="/"
+            spy={true}
+            smooth={true}
+            // activeClass="active"
+            offset={-78}
+            duration={500}
+            className="cursor-pointer"
+          >
+            <img className="w-32" src={logo} alt="..." />
+          </Link>
           <div className="flex items-center gap-4">
             <div className="mr-4 hidden lg:block">{navList}</div>
             <PrimaryButton className="rounded-full text-sm hidden lg:inline-block">
