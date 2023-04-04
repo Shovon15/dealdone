@@ -45,7 +45,7 @@ const Integration = () => {
   ];
   return (
     <div className="bg-indigo-400 py-5 px-5 md:px-10">
-      <h1 className="text-xl font-semibold text-center">
+      <h1 className="text-xl md:text-4xl py-5 font-semibold text-center">
         One Click Integration With
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-3  m-5 md:mx-10 gap-5 ">

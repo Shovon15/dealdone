@@ -1,15 +1,18 @@
 import React from "react";
 import Home from "./Home/Home";
 import Integration from "./Integration/Integration";
-import Navbar from "./Navbar/Navbar";
+import Nav from "../Pages/Navbar/Nav";
+import WhyDealdone from "./WhyDealdone/WhyDealdone";
+import { Button } from "@material-tailwind/react";
 
 const LandingPage = () => {
   return (
-    <div>
-      <Navbar />
+    <>
+      <Nav />
       <Home />
-      <Integration />
-    </div>
+      {/* <Integration />
+      <WhyDealdone /> */}
+    </>
   );
 };
 

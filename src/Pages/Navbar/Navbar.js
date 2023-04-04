@@ -30,11 +30,11 @@ const Navbar = () => {
   ];
   return (
     <div
-      className={`w-full  fixed top-0 left-0 sticky top-0 z-20  transition-shadow ${
+      className={`w-full  fixed top-0 left-0  z-20  transition-shadow ${
         scrollPosition > 0 ? "shadow-md" : "shadow-none"
       }`}
     >
-      <div className="md:flex items-center justify-between bg-slate-500 py-4 md:px-10 px-7">
+      <div className="md:flex items-center justify-between bg-slate-100 py-4 md:px-10 px-7">
         <div
           className="font-bold text-2xl cursor-pointer flex items-center font-[Poppins] 
       text-gray-800"
