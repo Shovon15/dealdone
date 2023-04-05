@@ -17,7 +17,9 @@ const Home = () => {
         >
           Sell from a single dashboard
         </Typography>
-        <Typography variant="lead">An Omni-Channel Aggregator SaaS</Typography>
+        <Typography className="font-semibold" variant="lead">
+          An Omni-Channel Aggregator SaaS
+        </Typography>
         <Button className="md:mr-auto my-2 md:my-5 px-12 py-4 text-xl">
           Start Free Trial
         </Button>

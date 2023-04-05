@@ -1,3 +1,9 @@
-.active {
-    color: blue;
+ .active {
+    color: #1976D2;
    }
+   .dark.active{
+    color: #183450;
+   }
+/*.active:dark {
+    color: #183450;
+   } */
