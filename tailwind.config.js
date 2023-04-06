@@ -18,8 +18,11 @@ module.exports = withMT({
       colors: {
         primary: "#3949AB",
         secondary: "#121212",
-        buttonColor: "#2196F3",
+        buttonColor: "#1976D2",
+        buttonColorHover: "#0e5ead",
         dark: "#0F172A",
+        darkComp: "#07173D",
+        darkBorder: "#14254d",
         textPrimary: "#0a3d62",
       },
     },

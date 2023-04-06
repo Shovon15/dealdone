@@ -66,13 +66,13 @@ const Brands = () => {
     },
     {
       width: 1000,
-      itemsToShow: 6,
-      itemsToScroll: 2,
+      itemsToShow: 5,
+      itemsToScroll: 1,
     },
   ];
 
   return (
-    <div className=" bg-slate-100 flex justify-center items-center p-5">
+    <div className="flex justify-center items-center px-2  py-5">
       <Carousel
         breakPoints={breakPoints}
         ref={carouselRef}
@@ -80,13 +80,13 @@ const Brands = () => {
         // itemsToShow={3}
         //   itemsToScroll={itemsToScroll}
         // renderArrow={myArrow}
-        pagination={false}
+        pagination={true}
         // renderPagination={myPagination}
         enableAutoPlay={true}
         autoPlaySpeed={2500}
         onNextEnd={({ index }) => {
           console.log("index", index, "length", items.length);
-          if (index === 4) {
+          if (index === 9) {
             clearTimeout(resetTimeout);
             resetTimeout = setTimeout(() => {
               carouselRef?.current?.goTo(0);
@@ -95,8 +95,12 @@ const Brands = () => {
         }}
       >
         {items.map((item, i) => (
-          <div key={i} item={item}>
-            <img src={item.brand} alt="..." className="w-38" />
+          <div
+            key={i}
+            item={item}
+            className="dark:bg-gray-300 px-2 rounded-md h-20 w-44 flex justify-center items-center"
+          >
+            <img src={item.brand} alt="..." className="w-full " />
           </div>
         ))}
       </Carousel>

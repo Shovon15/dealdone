@@ -1,10 +1,11 @@
 import React from "react";
 import Home from "./Home/Home";
-import Integration from "./Integration/Integration";
 import Nav from "../Pages/Navbar/Nav";
 import WhyDealdone from "./WhyDealdone/WhyDealdone";
-import { Button } from "@material-tailwind/react";
 import Brands from "./Home/Brands";
+import Pricing from "./Pricing/Pricing";
+import Footer from "./Footer/Footer";
+import CreditScore from "./CreditScore/CreditScore";
 
 const LandingPage = () => {
   return (
@@ -13,8 +14,9 @@ const LandingPage = () => {
       <Home />
       <Brands />
       <WhyDealdone />
-
-      {/* <Integration /> */}
+      <CreditScore />
+      <Pricing />
+      <Footer />
     </>
   );
 };

@@ -1,0 +1,10 @@
+.rotate {
+    -moz-transition: all .5s linear;
+    -webkit-transition: all .5s linear;
+    transition: all .5s linear;
+}
+.rotate.down {
+    -moz-transform:rotate(35deg);
+    -webkit-transform:rotate(35deg);
+    transform:rotate(45deg);
+}

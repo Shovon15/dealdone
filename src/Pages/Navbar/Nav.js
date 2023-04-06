@@ -24,7 +24,9 @@ const Nav = ({ active }) => {
 
   const items = (
     <>
-      <PrimaryButton>Get Started</PrimaryButton>
+      <a href="https://app.dealdone.com.bd">
+        <PrimaryButton>SignUp</PrimaryButton>
+      </a>
 
       {/* <Switch onClick={handleThemeSwitch} /> */}
       <div className="flex justify-center items-center md:ml-4 ">
@@ -97,7 +99,7 @@ const Nav = ({ active }) => {
             activeClass={active}
             offset={-70}
             duration={500}
-            className="text-gray-800 dark:text-gray-200 font-bold  hover:text-blue-500  duration-500"
+            className="text-gray-800  font-bold  hover:text-blue-500  duration-500"
           >
             Pricing
           </Link>
@@ -167,7 +169,7 @@ const Nav = ({ active }) => {
         </div>
         <MobileNav open={openNav}>
           {navList}
-          <div className="md:hidden flex justify-start gap-5 mt-2">{items}</div>
+          <div className="md:hidden flex justify-start gap-5 my-2">{items}</div>
         </MobileNav>
       </Navbar>
     </>

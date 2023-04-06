@@ -1,0 +1,4 @@
+.item:nth-last-child(1):nth-child(odd) {
+	grid-column: 2 / span 2;
+}
+

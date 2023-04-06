@@ -4,7 +4,7 @@ import React from "react";
 const PrimaryButton = ({ children, className }) => {
   return (
     <Button
-      className={`${className} bg-blue-600 text-white py-3 px-6 rounded-md  hover:bg-blue-700 
+      className={`${className} bg-buttonColor text-white  rounded-md  hover:bg-buttonColorHover 
   duration-500`}
     >
       {children}
