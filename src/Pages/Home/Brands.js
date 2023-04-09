@@ -80,13 +80,14 @@ const Brands = () => {
         // itemsToShow={3}
         //   itemsToScroll={itemsToScroll}
         // renderArrow={myArrow}
-        pagination={true}
+        pagination={false}
         // renderPagination={myPagination}
         enableAutoPlay={true}
         autoPlaySpeed={2500}
         onNextEnd={({ index }) => {
           console.log("index", index, "length", items.length);
-          if (index === 9) {
+          // if (index === 9) {
+          if (index === 5) {
             clearTimeout(resetTimeout);
             resetTimeout = setTimeout(() => {
               carouselRef?.current?.goTo(0);

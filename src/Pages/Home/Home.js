@@ -16,11 +16,13 @@ const Home = () => {
         <Typography className="font-semibold" variant="lead">
           An Omni-Channel Aggregator SaaS
         </Typography>
-        <a href="https://app.dealdone.com.bd/login" className="mx-auto">
-          <PrimaryButton className="md:mr-auto my-2 md:my-5 px-12 py-4 text-xl">
-            Start Free Trial
-          </PrimaryButton>
-        </a>
+        <div className="mx-auto md:m-0">
+          <a href="https://app.dealdone.com.bd/login">
+            <PrimaryButton className=" my-2 md:my-5 px-12 py-4 text-xl">
+              Start Free Trial
+            </PrimaryButton>
+          </a>
+        </div>
       </div>
       <div className="w-full md:w-7/12 p-2 ">
         <img className="" src={mainBanner} alt="..." />

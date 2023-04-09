@@ -1,6 +1,7 @@
 import { Typography } from "@material-tailwind/react";
 import React from "react";
 import logo from "../../assets/logo/logo.svg";
+import logoSmall from "../../assets/logoSmall.png";
 import { BsTelephone } from "react-icons/bs";
 import { FiMail } from "react-icons/fi";
 import { GoLocation } from "react-icons/go";
@@ -9,10 +10,16 @@ const Footer = () => {
   return (
     <footer className=" bg-darkComp text-white p-8">
       <div className="flex flex-row flex-wrap items-center justify-center gap-y-6 gap-x-12  text-center md:justify-between">
-        <div className="bg-white dark:bg-darkComp  p-3 rounded-xl cursor-pointer">
-          <img src={logo} alt="logo-ct" className="w-44" />
+        <div className=" dark:bg-darkComp  p-3 rounded-xl cursor-pointer w-full md:w-1/3 flex flex-col items-center gap-3 ">
+          {/* <img src={logo} alt="logo-ct" className="w-44" /> */}
+          <img src={logoSmall} alt="logo-ct" className="w-16" />
+          <p className="">
+            Sunt exercitation ipsum sint pariatur aliqua fugiat reprehenderit
+            pariatur ipsum. Lorem elit eu nostrud excepteur minim ea mollit
+            cillum. Sunt mollit sit voluptate cillum qui.
+          </p>
         </div>
-        <ul className="flex flex-wrap items-center gap-y-2 gap-x-8">
+        <ul className="flex flex-wrap items-center gap-y-2 gap-x-8 ">
           <li>
             <Typography
               as="a"
@@ -44,7 +51,7 @@ const Footer = () => {
             </Typography>
           </li>
         </ul>
-        <div className="">
+        <div className="w-full md:w-1/3">
           <p className="text-center font-semibold py-2">Contact</p>
           <div>
             <div className="flex flex-col gap-2 justify-center items-start">

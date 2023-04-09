@@ -13,6 +13,7 @@ import SwitchButton from "../../Components/Button/SwitchButton";
 const Nav = ({ active }) => {
   const [openNav, setOpenNav] = React.useState(false);
   const { width } = useContext(ScrollContext);
+  const { scrollPosition } = useContext(ScrollContext);
   console.log("width", width);
 
   React.useEffect(() => {
@@ -99,7 +100,7 @@ const Nav = ({ active }) => {
             activeClass={active}
             offset={-70}
             duration={500}
-            className="text-gray-800  font-bold  hover:text-blue-500  duration-500"
+            className="text-gray-800 dark:text-gray-200  font-bold  hover:text-blue-500  duration-500"
           >
             Pricing
           </Link>
@@ -110,7 +111,14 @@ const Nav = ({ active }) => {
 
   return (
     <>
-      <Navbar className="sticky inset-0 z-10 h-max max-w-full rounded-none shadow-none bg-transparent border-none py-2 px-4 lg:px-8 lg:py-3">
+      <Navbar
+        className={`sticky inset-0 z-10 h-max max-w-full rounded-none  
+       border-none py-2 px-4 lg:px-8 lg:py-3  transition-shadow bg-inherit ${
+         scrollPosition > 0
+           ? "shadow-[0_25px_30px_-15px_rgba(0,0,0,0.2)]"
+           : "shadow-none "
+       }`}
+      >
         <div className="flex items-center justify-between text-blue-gray-900">
           <Link
             to="/"
