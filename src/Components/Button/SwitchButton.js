@@ -10,7 +10,7 @@ const SwitchButton = () => {
 
   return (
     <button
-      className="w-10 h-10 rounded-xl bg-darkComp dark:bg-gray-400 flex items-center justify-center"
+      className="w-10 h-10 rounded-xl border border-buttonColor  flex items-center justify-center"
       onClick={handleThemeSwitch}
     >
       {theme === "light" ? (
@@ -28,3 +28,4 @@ const SwitchButton = () => {
 };
 
 export default SwitchButton;
+// bg-darkComp dark:bg-gray-400
