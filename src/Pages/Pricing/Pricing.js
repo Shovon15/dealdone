@@ -32,13 +32,13 @@ const Pricing = () => {
     },
   ];
   return (
-    <div id="pricing" className="min-h-screen m-5 py-10 md:mx-10">
+    <div id="pricing" className="min-h-screen m-5 py-5 md:mx-10">
       <Typography variant="h5" className="font-bold text-center">
         Get started with one of our plans
       </Typography>
 
       <Typography
-        className="font-extrabold text-3xl md:text-5xl text-center flex  justify-center md:text-start py-2"
+        className="font-extrabold text-2xl md:text-5xl text-center flex  justify-center md:text-start py-2"
         variant="h1"
       >
         Simple, Affordable Pricing
@@ -49,7 +49,7 @@ const Pricing = () => {
           <PricingCard />
         </div>
 
-        <div className="w-full bg-gray-100 dark:bg-darkComp  md:w-4/12 border border-gray-300 dark:border-darkBorder rounded-lg p-5">
+        <div className="w-full bg-gray-100 dark:bg-darkComp   md:w-4/12 border border-gray-300 dark:border-darkBorder hover:border-green-700 rounded-lg p-5">
           <Typography variant="h4" className="pb-5">
             Features
           </Typography>

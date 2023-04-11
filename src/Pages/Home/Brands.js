@@ -13,12 +13,12 @@ import brnad9 from "../../assets/Company logo/shoplover.png";
 import brnad10 from "../../assets/Company logo/woocommerce.png";
 
 const Brands = () => {
-  const carouselRef = React.createRef(null);
-  let resetTimeout;
+  // const carouselRef = React.createRef(null);
+  // let resetTimeout;
 
   const items = [
     {
-      brand: brnad1,
+      brand: brnad5,
     },
     {
       brand: brnad2,
@@ -30,7 +30,7 @@ const Brands = () => {
       brand: brnad4,
     },
     {
-      brand: brnad5,
+      brand: brnad10,
     },
     {
       brand: brnad6,
@@ -44,20 +44,17 @@ const Brands = () => {
     {
       brand: brnad9,
     },
-    {
-      brand: brnad10,
-    },
   ];
   const breakPoints = [
     {
-      width: 1,
-      itemsToShow: 1,
-      itemsToScroll: 1,
+      width: 6,
+      itemsToShow: 3,
+      itemsToScroll: 3,
     },
     {
       width: 550,
-      itemsToShow: 3,
-      itemsToScroll: 1,
+      itemsToShow: 4,
+      itemsToScroll: 4,
     },
     {
       width: 768,
@@ -72,34 +69,34 @@ const Brands = () => {
   ];
 
   return (
-    <div className="flex justify-center items-center px-2  py-5">
+    <div className="flex justify-center items-center my-2  md:my-16 w-full">
       <Carousel
         breakPoints={breakPoints}
-        ref={carouselRef}
+        // ref={carouselRef}
         enableMouseSwipe={true}
         // itemsToShow={3}
         //   itemsToScroll={itemsToScroll}
         // renderArrow={myArrow}
         pagination={false}
         // renderPagination={myPagination}
-        enableAutoPlay={true}
-        autoPlaySpeed={2500}
-        onNextEnd={({ index }) => {
-          console.log("index", index, "length", items.length);
-          // if (index === 9) {
-          if (index === 5) {
-            clearTimeout(resetTimeout);
-            resetTimeout = setTimeout(() => {
-              carouselRef?.current?.goTo(0);
-            }, 2000); // same time
-          }
-        }}
+        // enableAutoPlay={true}
+        // autoPlaySpeed={2500}
+        // onNextEnd={({ index }) => {
+        //   console.log("index", index, "length", items.length);
+        //   // if (index === 9) {
+        //   if (index === 5) {
+        //     clearTimeout(resetTimeout);
+        //     resetTimeout = setTimeout(() => {
+        //       carouselRef?.current?.goTo(0);
+        //     }, 2000); // same time
+        //   }
+        // }}
       >
         {items.map((item, i) => (
           <div
             key={i}
             item={item}
-            className="dark:bg-gray-300 px-2 rounded-md h-20 w-44 flex justify-center items-center"
+            className="dark:bg-gray-300 mx-0.5 p-2 md:p-7 rounded-md h-12 md:h-20 w-full md:w-52 flex justify-center items-center"
           >
             <img src={item.brand} alt="..." className="w-full " />
           </div>

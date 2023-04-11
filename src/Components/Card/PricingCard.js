@@ -19,7 +19,7 @@ const PricingCard = () => {
       //   iconColor: pack1Color,
       title: "Cottage & Micro",
       text: "(Free For First 12Months) ",
-      price: "99/Month",
+      price: "99",
     },
     {
       icon: <HiOutlineBuildingOffice2 />,
@@ -27,14 +27,14 @@ const PricingCard = () => {
       //   iconColor: pack2Color,
       title: "SME",
       text: "(Free For First 6Months) ",
-      price: "599/Month",
+      price: "599",
     },
     {
       icon: <BsBuildings />,
       //   iconColor: pack3Color,
       title: "Enterprise",
       text: "(15Days FREE Trial) ",
-      price: "9,999/Month",
+      price: "9,999",
     },
   ];
   return (

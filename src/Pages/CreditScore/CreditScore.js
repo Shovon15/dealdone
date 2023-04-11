@@ -21,21 +21,32 @@ const CreditScore = () => {
     // </div>
     <div
       id="credit_scoring"
-      className="flex flex-col min-h-fit md:flex-row justify-center items-center bg-white dark:bg-darkComp rounded-lg p-10 w-10/12 mx-auto"
+      className="flex flex-col min-h-fit md:flex-row justify-between items-center
+       bg-white dark:bg-darkComp rounded-lg m-5 md:mx-10  md:p-5"
     >
-      <div className="w-full md:w-5/12 flex flex-col justify-center px-2 gap-4">
+      <div className="flex flex-col justify-center p-4  gap-4">
         <Typography
-          className="font-extrabold md:text-3xl text-center md:text-start py-2"
+          className="font-extrabold text-2xl md:text-3xl text-center md:text-start py-2"
           variant="h3"
         >
           FREE Credit Score & Report Updated Daily.
         </Typography>
-
-        <PrimaryButton className="md:mr-auto mx-8 text-xl">
-          Book A Meeting
-        </PrimaryButton>
+        <Typography
+          className="font-semibold text-md text-center md:text-start"
+          variant="lead"
+        >
+          Borrow Up To 200% Of Your Monthly Revenue With A Revenue Based Loan
+          From Our Banking Partners Instantly.
+        </Typography>
+        <div className="mx-auto md:m-0">
+          <a href="">
+            <PrimaryButton className="md:mr-auto  mb-4 md:mb-0  text-md md:text-xl">
+              Book A Meeting
+            </PrimaryButton>
+          </a>
+        </div>
       </div>
-      <div className="w-full md:w-7/12 p-2 ">
+      <div className=" p-2 ">
         <img className="" src={scoreImg} alt="..." />
       </div>
     </div>

@@ -4,7 +4,6 @@ import img1 from "../../assets/featureMultiChannel.png";
 import img2 from "../../assets/featureInventory.png";
 import img3 from "../../assets/featureOrders.png";
 import img4 from "../../assets/featureLending.png";
-import img5 from "../../assets/creditScoreGraphics.png";
 import WhyDealdoneCard from "../../Components/Card/WhyDealdoneCard";
 
 const WhyDealdone = () => {
@@ -22,18 +21,23 @@ const WhyDealdone = () => {
     {
       img: img3,
       title: "All Orders In A Tab",
-      text: "View all the orders from different channels in one place & easily track & ship them, without missing any important deadline - giving you complete control over your business.",
+      text: "View all the orders from different channels in one place & easily track & ship them, without missing any important deadline ",
     },
     {
       img: img4,
       title: "Easy Lending",
-      text: "Loans can be applied online in a click. We assess the data and create your credit profiles for our banking partners.",
+      text: "View all the orders from different channels in one place & easily track & ship them, without missing any important deadline",
     },
+    // {
+    //   img: img4,
+    //   title: "",
+    //   text: "Loans can be applied online in a click. We assess the data and create your credit profiles for our banking partners.",
+    // },
   ];
   return (
-    <div id="why_dealdone" className="px-3 md:px-10  p-5">
+    <div id="why_dealdone" className="px-3 md:px-10 min-h-fit my-auto p-5 ">
       <SectionHeading title="Why Dealdone?" />
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 md:gap-3 p-5">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-7 p-2">
         {items.map((item, i) => (
           <WhyDealdoneCard key={i} item={item} />
         ))}

@@ -1,9 +1,9 @@
 /* square buttons */
 .rec.rec-arrow {
     border-radius: 50;
-background-color: none;
-/* color:bisque; */
-    
+    background-color: none;
+    display:none;
+    /* color:bisque; */
     /* width: 0; */
     /* visibility: hidden; */
 }
