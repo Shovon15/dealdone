@@ -21,7 +21,7 @@ const Home = () => {
         </Typography>
         <div className="mx-auto md:m-0">
           <a href="https://app.dealdone.com.bd/login">
-            <PrimaryButton className="md:mr-auto mx-6 mb-4 md:mb-0  text-md md:text-xl">
+            <PrimaryButton className="md:mr-auto  mb-4 md:mb-0  text-md md:text-xl">
               Start Free Trial
             </PrimaryButton>
           </a>
