@@ -7,7 +7,7 @@ import { GoLocation } from "react-icons/go";
 
 const Footer = () => {
   return (
-    <footer id="footer" className=" bg-darkComp text-white p-5">
+    <div id="footer" className=" bg-darkComp text-white p-5">
       <div className="flex flex-col md:flex-row  items-center gap-2 md:gap-12 ">
         <div className="w-full md:w-2/3  flex flex-col  gap-3">
           <img src={logoSmall} alt="logo-ct" className="w-16 mx-auto md:mx-0" />
@@ -58,7 +58,7 @@ const Footer = () => {
       >
         &copy; 2023 DealDone Platform Limited
       </Typography>
-    </footer>
+    </div>
   );
 };
 

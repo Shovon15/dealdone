@@ -27,7 +27,7 @@ const Pricing = () => {
     },
   ];
   return (
-    <div id="pricing" className="min-h-screen m-5 py-5 md:mx-10">
+    <div id="pricing" className=" m-5 py-5 md:mx-10">
       <Typography variant="h5" className="font-bold text-center">
         Get started with one of our plans
       </Typography>
