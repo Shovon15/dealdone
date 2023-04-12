@@ -1,16 +1,13 @@
 import React from "react";
 import "./Brand.css";
 import Carousel from "react-elastic-carousel";
-import brnad1 from "../../assets/Company logo/atn.png";
-import brnad2 from "../../assets/Company logo/ajkerdeal.png";
-import brnad3 from "../../assets/Company logo/daraz.png";
-import brnad4 from "../../assets/Company logo/ebay.png";
-import brnad5 from "../../assets/Company logo/jadroo.png";
-import brnad6 from "../../assets/Company logo/magento.png";
-import brnad7 from "../../assets/Company logo/perfee.png";
-import brnad8 from "../../assets/Company logo/shopify.png";
-import brnad9 from "../../assets/Company logo/shoplover.png";
-import brnad10 from "../../assets/Company logo/woocommerce.png";
+import brnad1 from "../../assets/Company logo/01.png";
+import brnad2 from "../../assets/Company logo/02.png";
+import brnad3 from "../../assets/Company logo/03.png";
+import brnad4 from "../../assets/Company logo/04.png";
+import brnad5 from "../../assets/Company logo/05.png";
+import brnad6 from "../../assets/Company logo/06.png";
+import brnad7 from "../../assets/Company logo/07.png";
 
 const Brands = () => {
   // const carouselRef = React.createRef(null);
@@ -18,7 +15,7 @@ const Brands = () => {
 
   const items = [
     {
-      brand: brnad5,
+      brand: brnad1,
     },
     {
       brand: brnad2,
@@ -30,19 +27,13 @@ const Brands = () => {
       brand: brnad4,
     },
     {
-      brand: brnad10,
+      brand: brnad5,
     },
     {
       brand: brnad6,
     },
     {
       brand: brnad7,
-    },
-    {
-      brand: brnad8,
-    },
-    {
-      brand: brnad9,
     },
   ];
   const breakPoints = [
@@ -63,13 +54,13 @@ const Brands = () => {
     },
     {
       width: 1000,
-      itemsToShow: 5,
+      itemsToShow: 7,
       itemsToScroll: 1,
     },
   ];
 
   return (
-    <div className="flex justify-center items-center my-2  md:my-16 w-full">
+    <div className="flex justify-center items-center my-6   md:my-12 w-full">
       <Carousel
         breakPoints={breakPoints}
         // ref={carouselRef}
@@ -96,7 +87,7 @@ const Brands = () => {
           <div
             key={i}
             item={item}
-            className="dark:bg-gray-300 mx-0.5 p-2 md:p-7 rounded-md h-12 md:h-20 w-full md:w-52 flex justify-center items-center"
+            className=" mx-0.5 p-2 md:p-7 rounded-md h-12 md:h-20 w-full md:w-52 flex justify-center items-center"
           >
             <img src={item.brand} alt="..." className="w-full " />
           </div>

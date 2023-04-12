@@ -1,6 +1,5 @@
 import { Typography } from "@material-tailwind/react";
 import React from "react";
-import logo from "../../assets/logo/logo.svg";
 import logoSmall from "../../assets/logoSmall.png";
 import { BsTelephone } from "react-icons/bs";
 import { FiMail } from "react-icons/fi";
@@ -8,56 +7,33 @@ import { GoLocation } from "react-icons/go";
 
 const Footer = () => {
   return (
-    <footer className=" bg-darkComp text-white p-8">
-      <div className="flex flex-row flex-wrap items-center justify-center gap-y-6 gap-x-12  text-center md:justify-between">
-        <div className=" dark:bg-darkComp  p-3 rounded-xl cursor-pointer w-full md:w-1/3 flex flex-col items-center gap-3 ">
-          {/* <img src={logo} alt="logo-ct" className="w-44" /> */}
-          <img src={logoSmall} alt="logo-ct" className="w-16" />
-          <p className="">
-            Sunt exercitation ipsum sint pariatur aliqua fugiat reprehenderit
-            pariatur ipsum. Lorem elit eu nostrud excepteur minim ea mollit
-            cillum. Sunt mollit sit voluptate cillum qui.
+    <footer id="footer" className=" bg-darkComp text-white p-5">
+      <div className="flex flex-col md:flex-row  items-center gap-2 md:gap-12 ">
+        <div className="w-full md:w-2/3  flex flex-col  gap-3">
+          <img src={logoSmall} alt="logo-ct" className="w-16 mx-auto md:mx-0" />
+          <p className="">Omni-Channel Aggregator SaaS</p>
+          <p className="text-justify text-xl font-semibold">
+            Built To Reduce Manual Work Of Online Selling.
+          </p>
+          <p className="text-justify text-sm">
+            Having Diverse Sales Channels For Your Product Line That Are A Pain
+            To Track & Manage? Grow Your Brand! Not Your Daily Tasks On Product
+            & Order Management.
+          </p>
+          <p className="text-justify text-xs">
+            dealdone Automates Your Entire Online Selling Process, Providing You
+            With The Tools & Support To Scale Your E-Commerce Business Across
+            Multiple Marketplaces & Storefront.
           </p>
         </div>
-        <ul className="flex flex-wrap items-center gap-y-2 gap-x-8 ">
-          <li>
-            <Typography
-              as="a"
-              //   href="#"
-              color="blue-gray"
-              className="font-normal transition-colors text-white dark:text-white hover:text-blue-500 focus:text-blue-500  cursor-pointer"
-            >
-              About Us
-            </Typography>
-          </li>
-          <li>
-            <Typography
-              as="a"
-              //   href="#"
-              color="blue-gray"
-              className="font-normal transition-colors text-white dark:text-white hover:text-blue-500 focus:text-blue-500  cursor-pointer"
-            >
-              License
-            </Typography>
-          </li>
-          <li>
-            <Typography
-              as="a"
-              //   href="#"
-              color="blue-gray"
-              className="font-normal transition-colors text-white dark:text-white hover:text-blue-500 focus:text-blue-500  cursor-pointer"
-            >
-              Contribute
-            </Typography>
-          </li>
-        </ul>
+
         <div className="w-full md:w-1/3">
-          <p className="text-center font-semibold py-2">Contact</p>
+          <p className="text-center font-semibold py-2">Contact Us</p>
           <div>
             <div className="flex flex-col gap-2 justify-center items-start">
               <span className="flex items-center gap-2 ">
                 <BsTelephone />
-                <p>+0098278278247</p>
+                <p>+8801677209697</p>
               </span>
               <span className="flex items-center gap-2">
                 <FiMail />

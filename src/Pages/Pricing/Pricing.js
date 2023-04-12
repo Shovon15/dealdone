@@ -1,12 +1,7 @@
 import { Typography } from "@material-tailwind/react";
 import React from "react";
-import SectionText from "../../Components/Text/SectionText";
-import SectionHeading from "../../Components/Text/SectionHeading";
 import PricingCard from "../../Components/Card/PricingCard";
-// import {  } from "react-icons/io";
-import { IoCheckmarkCircleOutline } from "react-icons/io5";
 import { IoCheckmarkDoneCircle } from "react-icons/io5";
-// import { IoIosCheckmarkCircle } from "react-icons/io";
 
 const Pricing = () => {
   const features = [
@@ -49,16 +44,19 @@ const Pricing = () => {
           <PricingCard />
         </div>
 
-        <div className="w-full bg-gray-100 dark:bg-darkComp   md:w-4/12 border border-gray-300 dark:border-darkBorder hover:border-green-700 rounded-lg p-5">
-          <Typography variant="h4" className="pb-5">
+        <div
+          className=" bg-gray-100 dark:bg-darkComp mx-6 md:mx-0   md:w-4/12 border border-gray-300
+         dark:border-darkBorder hover:border-green-700 rounded-lg p-5"
+        >
+          <Typography variant="h5" className="pb-5">
             Features
           </Typography>
           {features.map((feature, i) => (
-            <div className="flex gap-4 py-1.5 justify-start items-center text-4xl hover:text-buttonColorHover cursor-pointer">
-              <span className="font-extrabold text-green-700 hover:ring-2 ring-green-700 rounded-full p-0">
+            <div className="parent-style flex gap-4 py-1.5 justify-start items-center text-4xl hover:text-buttonColorHover cursor-pointer">
+              <span className="child-style font-bold text-green-700 hover:ring-2 ring-green-700 rounded-full p-0">
                 {feature.icon}
               </span>
-              <Typography variant="h5">{feature.text}</Typography>
+              <p className="child-style text-sm font-bold">{feature.text}</p>
             </div>
           ))}
         </div>

@@ -1,13 +1,16 @@
-import { IconButton, MobileNav, Navbar } from "@material-tailwind/react";
+import {
+  Button,
+  IconButton,
+  MobileNav,
+  Navbar,
+} from "@material-tailwind/react";
 import React from "react";
 import "./Nav.css";
 import { Link } from "react-scroll";
-import PrimaryButton from "../../Components/Button/PrimaryButton";
 import logo from "../../assets/logo/logo.svg";
 import logoSmall from "../../assets/logoSmall.png";
 import { useContext } from "react";
 import { ScrollContext } from "../../Context/ScrollPosition";
-// import { NavLinks } from "./NavLinks";
 import SwitchButton from "../../Components/Button/SwitchButton";
 
 const Nav = ({ active }) => {
@@ -22,32 +25,22 @@ const Nav = ({ active }) => {
       () => window.innerWidth >= 400 && setOpenNav(false)
     );
   }, []);
+  const themeButton = (
+    <div className="flex justify-center items-center md:ml-0 ">
+      <SwitchButton />
+    </div>
+  );
 
-  const items = (
+  const signUpButton = (
     <>
       <a href="https://app.dealdone.com.bd">
-        <PrimaryButton>SignUp</PrimaryButton>
+        <Button
+          color="orange"
+          className="bg-orange-600  px-3 py-2 md:px-5 md:py-3 md:text-sm "
+        >
+          Sign-Up
+        </Button>
       </a>
-
-      {/* <Switch onClick={handleThemeSwitch} /> */}
-      <div className="flex justify-center items-center md:ml-4 ">
-        <SwitchButton />
-      </div>
-
-      {/* <label className="relative flex justify-between items-center group p-0 text-xl pointer cursor-pointer my-2 md:my-0">
-        <input
-          onClick={handleThemeSwitch}
-          type="checkbox"
-          className="absolute left-1/2 -translate-x-1/2 w-full h-full peer appearance-none rounded-md"
-        />
-        <div></div>
-
-        <span
-          className="w-[2.75rem] h-5 flex items-center flex-shrink-0 ml-2 p-0 bg-gray-500 rounded-full duration-300 
-               ease-in-out peer-checked:bg-green-400 after:w-[1.75rem] after:h-7 after:bg-gray-400 after:rounded-full after:shadow-md 
-               after:duration-300 peer-checked:after:translate-x-4 peer-checked:after:bg-gray-200 group-hover:after:translate-x-0 "
-        ></span>
-      </label> */}
     </>
   );
 
@@ -85,7 +78,7 @@ const Nav = ({ active }) => {
             spy={true}
             activeClass={active}
             smooth={true}
-            offset={-70}
+            offset={-100}
             duration={500}
             className="text-gray-800 dark:text-gray-200 font-bold hover:text-blue-500  duration-500"
           >
@@ -103,6 +96,19 @@ const Nav = ({ active }) => {
             className="text-gray-800 dark:text-gray-200  font-bold  hover:text-blue-500  duration-500"
           >
             Pricing
+          </Link>
+        </li>
+        <li className=" cursor-pointer">
+          <Link
+            to="footer"
+            spy={true}
+            smooth={true}
+            activeClass={active}
+            offset={-70}
+            duration={500}
+            className="text-gray-800 dark:text-gray-200  font-bold  hover:text-blue-500  duration-500"
+          >
+            About Us
           </Link>
         </li>
       </ul>
@@ -134,7 +140,10 @@ const Nav = ({ active }) => {
           </Link>
           <div className="flex items-center gap-4">
             <div className="mr-4 hidden lg:block">{navList}</div>
-            <div className="hidden md:flex justify-around mt-2">{items}</div>
+            <div className="justify-around mt-2">{signUpButton}</div>
+            <div className="hidden md:flex justify-around mt-2">
+              {themeButton}
+            </div>
 
             <IconButton
               variant="text"
@@ -177,7 +186,9 @@ const Nav = ({ active }) => {
         </div>
         <MobileNav open={openNav}>
           {navList}
-          <div className="md:hidden flex justify-start gap-5 my-2">{items}</div>
+          <div className="md:hidden flex justify-start gap-5 my-2">
+            {themeButton}
+          </div>
         </MobileNav>
       </Navbar>
     </>

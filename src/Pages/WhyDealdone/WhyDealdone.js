@@ -10,23 +10,23 @@ const WhyDealdone = () => {
   const items = [
     {
       img: img1,
-      title: "Multi-Channel Listing",
+      title: "Multi-Channel Product Listing",
       text: "Expand from current channel onto many sales channels without a headache of manual listing.",
     },
     {
       img: img2,
-      title: "Real Time Inventory Sync",
+      title: "Real Time Order Sync",
       text: "Instant sync to keep your stock up to date on always evolving inventory and avoiding marketplaces ban for overselling on unavailable stock.",
     },
     {
       img: img3,
-      title: "All Orders In A Tab",
-      text: "View all the orders from different channels in one place & easily track & ship them, without missing any important deadline ",
+      title: "One Place To Manage Orders",
+      text: "View all the orders from different channels in one place & easily track & ship them, without missing any important deadline - giving you complete control over your business.",
     },
     {
       img: img4,
-      title: "Easy Lending",
-      text: "View all the orders from different channels in one place & easily track & ship them, without missing any important deadline",
+      title: "Revenue-Based Easy Loan ",
+      text: "Loans can be applied online in a click. We assess the data and create your credit profiles for our banking partners.",
     },
     // {
     //   img: img4,

@@ -4,7 +4,6 @@ import "./WhyDealdoneCard.css";
 
 const WhyDealdoneCard = ({ item }) => {
   return (
-    // col-span-1 item
     <section
       className="bg-white dark:bg-darkComp w-full  mx-auto
      rounded-2xl border-2 border-gray-300 dark:border-darkBorder"
@@ -25,8 +24,7 @@ const WhyDealdoneCard = ({ item }) => {
           </div>
           <div className="absolute my-rotate-y-180 backface-hidden w-full h-full bg-gray-300 rounded-xl overflow-hidden">
             <div className="text-center flex flex-col items-center justify-center h-full text-gray-800 p-2 md:p-5">
-              <p className="text-md md:text-3xl font-semibold">{item.title}</p>
-              <p className=" text-sm">{item.text}</p>
+              <p className=" text-xs md:text-lg">{item.text}</p>
             </div>
           </div>
         </div>

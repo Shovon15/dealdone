@@ -16,3 +16,15 @@
   .figure:hover img.Sirv.image-hover {
     opacity: 1;
   }
+
+  .parent:hover .child {
+    
+    color:#1976d2;
+  
+ }
+  .parent-style:hover .child-style {
+    
+    color:green;
+    
+ }
+
