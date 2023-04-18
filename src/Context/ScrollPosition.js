@@ -3,7 +3,7 @@ import { createContext, useEffect, useState } from "react";
 export const ScrollContext = createContext();
 const ScrollPositionProvider = ({ children }) => {
   const [scrollPosition, setScrollPosition] = useState(0);
-  console.log(scrollPosition);
+  // console.log(scrollPosition);
 
   useEffect(() => {
     const updatePosition = () => {
@@ -19,7 +19,7 @@ const ScrollPositionProvider = ({ children }) => {
 
   // ----------------------width
   const [width, setWidth] = useState(0);
-  console.log(width);
+  // console.log(width);
 
   useEffect(() => {
     const updateWidth = () => {

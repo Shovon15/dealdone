@@ -10,8 +10,8 @@ import brnad6 from "../../assets/Company logo/06.png";
 import brnad7 from "../../assets/Company logo/07.png";
 
 const Brands = () => {
-  // const carouselRef = React.createRef(null);
-  // let resetTimeout;
+  const carouselRef = React.createRef(null);
+  let resetTimeout;
 
   const items = [
     {
@@ -40,7 +40,7 @@ const Brands = () => {
     {
       width: 6,
       itemsToShow: 3,
-      itemsToScroll: 3,
+      itemsToScroll: 1,
     },
     {
       width: 550,
@@ -63,25 +63,25 @@ const Brands = () => {
     <div className="flex justify-center items-center my-6   md:my-12 w-full">
       <Carousel
         breakPoints={breakPoints}
-        // ref={carouselRef}
+        ref={carouselRef}
         enableMouseSwipe={true}
         // itemsToShow={3}
-        //   itemsToScroll={itemsToScroll}
+        // itemsToScroll={itemsToScroll}
         // renderArrow={myArrow}
         pagination={false}
         // renderPagination={myPagination}
-        // enableAutoPlay={true}
-        // autoPlaySpeed={2500}
-        // onNextEnd={({ index }) => {
-        //   console.log("index", index, "length", items.length);
-        //   // if (index === 9) {
-        //   if (index === 5) {
-        //     clearTimeout(resetTimeout);
-        //     resetTimeout = setTimeout(() => {
-        //       carouselRef?.current?.goTo(0);
-        //     }, 2000); // same time
-        //   }
-        // }}
+        enableAutoPlay={true}
+        autoPlaySpeed={1500}
+        onNextEnd={({ index }) => {
+          // console.log("index", index, "length", items.length);
+          // if (index === 9) {
+          if (index === 4) {
+            clearTimeout(resetTimeout);
+            resetTimeout = setTimeout(() => {
+              carouselRef?.current?.goTo(0);
+            }, 1500); // same time
+          }
+        }}
       >
         {items.map((item, i) => (
           <div

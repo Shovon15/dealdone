@@ -52,7 +52,10 @@ const Pricing = () => {
             Features
           </Typography>
           {features.map((feature, i) => (
-            <div className="parent-style flex gap-4 py-1.5 justify-start items-center text-4xl hover:text-buttonColorHover cursor-pointer">
+            <div
+              key={i}
+              className="parent-style flex gap-4 py-1.5 justify-start items-center text-4xl hover:text-buttonColorHover cursor-pointer"
+            >
               <span className="child-style font-bold text-green-700 hover:ring-2 ring-green-700 rounded-full p-0">
                 {feature.icon}
               </span>

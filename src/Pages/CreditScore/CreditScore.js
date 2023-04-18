@@ -19,12 +19,12 @@ const CreditScore = () => {
     //     <img src={scoreImg} alt="..." />
     //   </div>
     // </div>
-    <div id="credit_scoring" className="m-10 md:m-2">
+    <div id="credit_scoring" className="p-10 md:m-2 ">
       <div
         className="flex flex-col min-h-fit md:flex-row justify-between items-center
        bg-white dark:bg-darkComp rounded-lg m-5 md:mx-10  md:p-5"
       >
-        <div className="flex flex-col justify-center p-4  gap-4">
+        <div className="flex flex-col justify-center p-4  gap-8">
           <Typography
             className="font-extrabold text-2xl md:text-3xl text-center md:text-start py-2"
             variant="h3"
@@ -46,7 +46,7 @@ const CreditScore = () => {
           </a>
         </div> */}
         </div>
-        <div className=" p-2 ">
+        <div className=" p-2 mt-8 md:mt-0">
           <img className="" src={scoreImg} alt="..." />
         </div>
       </div>

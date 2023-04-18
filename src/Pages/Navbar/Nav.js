@@ -7,17 +7,21 @@ import {
 import React from "react";
 import "./Nav.css";
 import { Link } from "react-scroll";
-import logo from "../../assets/logo/logo.svg";
+import logo from "../../assets/logo.png";
 import logoSmall from "../../assets/logoSmall.png";
 import { useContext } from "react";
 import { ScrollContext } from "../../Context/ScrollPosition";
 import SwitchButton from "../../Components/Button/SwitchButton";
+// import {useRef} from "react"
+// import { useState } from "react";
 
 const Nav = ({ active }) => {
   const [openNav, setOpenNav] = React.useState(false);
-  const { width } = useContext(ScrollContext);
+  // const [openSlide, setopenSlide] = useState("");
+  // const { width } = useContext(ScrollContext);
   const { scrollPosition } = useContext(ScrollContext);
-  console.log("width", width);
+  // const catMenu = useRef(null)
+  // console.log("width", width);
 
   React.useEffect(() => {
     window.addEventListener(
@@ -25,6 +29,13 @@ const Nav = ({ active }) => {
       () => window.innerWidth >= 400 && setOpenNav(false)
     );
   }, []);
+
+  //   const closeOpenMenus = (e)=>{
+  //     if(catMenu.current && openSlide && !catMenu.current.contains(e.target)){
+  //       setopenSlide(false)
+  //     }
+  // }
+
   const themeButton = (
     <div className="flex justify-center items-center md:ml-0 ">
       <SwitchButton />
@@ -46,7 +57,7 @@ const Nav = ({ active }) => {
 
   const navList = (
     <>
-      <ul className="mb-4 mt-4 flex flex-col gap-4  lg:mb-0 lg:mt-0 lg:flex-row items-start lg:items-center lg:gap-6">
+      <ul className="mb-4 mt-4 flex flex-col gap-4  lg:mb-0 lg:mt-0 lg:flex-row items-end lg:items-center lg:gap-6">
         <Link
           to="/"
           spy={true}
@@ -65,7 +76,7 @@ const Nav = ({ active }) => {
             spy={true}
             activeClass={active}
             smooth={true}
-            offset={-70}
+            offset={-80}
             duration={500}
             className="text-gray-800 dark:text-gray-200 font-bold hover:text-blue-500  duration-500"
           >
@@ -78,7 +89,7 @@ const Nav = ({ active }) => {
             spy={true}
             activeClass={active}
             smooth={true}
-            offset={-100}
+            offset={-85}
             duration={500}
             className="text-gray-800 dark:text-gray-200 font-bold hover:text-blue-500  duration-500"
           >
@@ -125,7 +136,7 @@ const Nav = ({ active }) => {
            : "shadow-none "
        }`}
       >
-        <div className="flex items-center justify-between text-blue-gray-900">
+        <div className="flex items-center justify-between text-blue-gray-900 px-3">
           <Link
             to="/"
             spy={true}
@@ -185,8 +196,8 @@ const Nav = ({ active }) => {
           </div>
         </div>
         <MobileNav open={openNav}>
-          {navList}
-          <div className="md:hidden flex justify-start gap-5 my-2">
+          <div className="flex justify-end mx-5">{navList}</div>
+          <div className="md:hidden flex justify-end gap-5 my-2 mx-5">
             {themeButton}
           </div>
         </MobileNav>

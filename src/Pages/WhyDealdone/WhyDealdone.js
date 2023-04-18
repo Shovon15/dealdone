@@ -35,7 +35,10 @@ const WhyDealdone = () => {
     // },
   ];
   return (
-    <div id="why_dealdone" className="px-3 md:px-10 min-h-fit my-auto p-5 ">
+    <div
+      id="why_dealdone"
+      className="px-3 md:px-10 min-h-fit my-14 md:my-0 p-5 "
+    >
       <SectionHeading title="Why Dealdone?" />
       <div className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-7 p-2">
         {items.map((item, i) => (
