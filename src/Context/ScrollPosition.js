@@ -19,7 +19,7 @@ const ScrollPositionProvider = ({ children }) => {
 
   // ----------------------width
   const [width, setWidth] = useState(0);
-  // console.log(width);
+  console.log(width);
 
   useEffect(() => {
     const updateWidth = () => {

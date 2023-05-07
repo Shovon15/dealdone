@@ -4,7 +4,7 @@ import {
   MobileNav,
   Navbar,
 } from "@material-tailwind/react";
-import React from "react";
+import React, { useRef } from "react";
 import "./Nav.css";
 import { Link } from "react-scroll";
 import logo from "../../assets/logo.png";
@@ -12,6 +12,7 @@ import logoSmall from "../../assets/logoSmall.png";
 import { useContext } from "react";
 import { ScrollContext } from "../../Context/ScrollPosition";
 import SwitchButton from "../../Components/Button/SwitchButton";
+import { useEffect } from "react";
 // import {useRef} from "react"
 // import { useState } from "react";
 
@@ -29,6 +30,23 @@ const Nav = ({ active }) => {
       () => window.innerWidth >= 400 && setOpenNav(false)
     );
   }, []);
+  // ---------for click outside nav close--------------------
+  let menuRef = useRef();
+
+  useEffect(() => {
+    let handler = (e) => {
+      if (!menuRef.current.contains(e.target)) {
+        setOpenNav(false);
+        console.log(menuRef.current);
+      }
+    };
+
+    document.addEventListener("mousedown", handler);
+
+    return () => {
+      document.removeEventListener("mousedown", handler);
+    };
+  });
 
   //   const closeOpenMenus = (e)=>{
   //     if(catMenu.current && openSlide && !catMenu.current.contains(e.target)){
@@ -135,6 +153,7 @@ const Nav = ({ active }) => {
            ? "shadow-[0_25px_30px_-15px_rgba(0,0,0,0.2)]"
            : "shadow-none "
        }`}
+        ref={menuRef}
       >
         <div className="flex items-center justify-between text-blue-gray-900 px-3">
           <Link
