@@ -8,17 +8,19 @@ import Footer from "./Footer/Footer";
 import CreditScore from "./CreditScore/CreditScore";
 
 const LandingPage = () => {
-  return (
-    <>
-      <Nav />
-      <Home />
-      <Brands />
-      <WhyDealdone />
-      <CreditScore />
-      <Pricing />
-      <Footer />
-    </>
-  );
+	return (
+		<>
+			<Nav />
+			<div className="max-w-[1440px] mx-auto">
+				<Home />
+				<Brands />
+				<WhyDealdone />
+				<CreditScore />
+				<Pricing />
+				<Footer />
+			</div>
+		</>
+	);
 };
 
 export default LandingPage;
