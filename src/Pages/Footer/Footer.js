@@ -54,11 +54,16 @@ const Footer = () => {
 				service names used in this website are for identification purposes only. Use of these names, logos, and
 				brands does not imply endorsement.
 			</p>
-			<a href="https://unicornitpark.com/">
-				<Typography color="blue-gray" className="text-center font-semibold  text-white ">
-					unicornitpark.com
+			<div className="flex gap-2 justify-center items-center">
+				<Typography color="blue-gray" className="text-center font-thin  text-white ">
+					build by
 				</Typography>
-			</a>
+				<a href="https://shovon-mahamud.vercel.app" className="hover:underline">
+					<Typography color="blue-gray" className="text-center font-semibold  text-white ">
+						Shovon Mhamud
+					</Typography>
+				</a>
+			</div>
 		</div>
 	);
 };

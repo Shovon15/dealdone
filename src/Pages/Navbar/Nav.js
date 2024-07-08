@@ -87,7 +87,7 @@ const Nav = ({ active }) => {
 						duration={500}
 						className="text-gray-800 dark:text-gray-200 font-bold hover:text-blue-500  duration-500"
 					>
-						Why Dealdone
+						Why Onedone
 					</Link>
 				</li>
 				<li className=" cursor-pointer">
